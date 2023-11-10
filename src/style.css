@@ -1,0 +1,504 @@
+:root {
+  font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+  line-height: 1.5;
+  font-weight: 400;
+  background-color: #242424;
+
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-text-size-adjust: 100%;
+}
+* {
+  box-sizing: border-box;
+}
+
+:root {
+  /* Typography */
+  --pl-font-family: "MagnitSans", "Arial", "Helvetica", sans-serif;
+  --pl-font-family-secondary: "MagnitBox", "Arial", "Helvetica", sans-serif;
+  --pl-font-display-large: 700 48px / 56px var(--pl-font-family-secondary);
+  --pl-font-display-medium: 700 40px / 48px var(--pl-font-family-secondary);
+  --pl-font-display-small: 700 36px / 44px var(--pl-font-family-secondary);
+  --pl-font-headline-large: 700 32px / 40px var(--pl-font-family);
+  --pl-font-headline-medium: 700 28px / 36px var(--pl-font-family);
+  --pl-font-headline-small: 700 24px / 32px var(--pl-font-family);
+  --pl-font-title-large: 700 20px / 28px var(--pl-font-family-secondary);
+  --pl-font-title-medium: 700 18px / 26px var(--pl-font-family);
+  --pl-font-title-small: 700 16px / 24px var(--pl-font-family);
+  --pl-font-body-large-accent: 500 16px / 24px var(--pl-font-family);
+  --pl-font-body-large-accent-low: 500 16px / 20px var(--pl-font-family);
+  --pl-font-body-large-regular: 400 16px / 24px var(--pl-font-family);
+  --pl-font-body-large-regular-low: 400 16px / 20px var(--pl-font-family);
+  --pl-font-body-small-accent: 500 14px / 22px var(--pl-font-family);
+  --pl-font-body-small-accent-low: 500 14px / 18px var(--pl-font-family);
+  --pl-font-body-small-regular: 400 14px / 22px var(--pl-font-family);
+  --pl-font-body-small-regular-low: 400 14px / 18px var(--pl-font-family);
+  --pl-font-caption-large-accent: 500 12px / 20px var(--pl-font-family);
+  --pl-font-caption-large-accent-low: 500 12px / 16px var(--pl-font-family);
+  --pl-font-caption-large-regular: 400 12px / 20px var(--pl-font-family);
+  --pl-font-caption-large-regular-low: 400 12px / 16px var(--pl-font-family);
+  --pl-font-caption-small-accent: 500 10px / 18px var(--pl-font-family);
+  --pl-font-caption-small-accent-low: 500 10px / 14px var(--pl-font-family);
+  --pl-font-caption-small-regular: 400 10px / 18px var(--pl-font-family);
+  --pl-font-caption-small-regular-low: 400 10px / 14px var(--pl-font-family);
+
+  /* Shadows */
+  --pl-shadow-s: 0px 1px 6px 0px rgb(68 68 68 / 10%);
+  --pl-shadow-m: 0px 2px 8px 0px rgb(106 106 106 / 12%);
+  --pl-shadow-ml: 0px 3px 10px 0px rgb(87 87 87 / 14%);
+  --pl-shadow-l: 0px 4px 16px 0px rgb(74 74 74 / 18%);
+  --pl-shadow-xl: 0px 6px 20px 0px rgb(56 56 56 / 20%);
+
+  /* Color Project Core */
+  --pl-color-project-core-primary: #ed0e00;
+  --pl-color-project-core-secondary: #f13e33;
+  --pl-color-project-core-light: #ffafaa;
+  --pl-color-project-core-pale: #ffe2e0;
+
+  /* Color Project Cosmetic */
+  --pl-color-project-cosmetic-primary: #d01481;
+  --pl-color-project-cosmetic-secondary: #d9439a;
+  --pl-color-project-cosmetic-light: #e789c0;
+  --pl-color-project-cosmetic-pale: #f6d0e6;
+
+  /* Color Project Apteka */
+  --pl-color-project-apteka-primary: #1598a6;
+  --pl-color-project-apteka-secondary: #44adb8;
+  --pl-color-project-apteka-light: #5ccbd6;
+  --pl-color-project-apteka-pale: #ceeff3;
+
+  /* Color Project Master */
+  --pl-color-project-master-primary: #09546e;
+  --pl-color-project-master-secondary: #3a768b;
+  --pl-color-project-master-light: #84a9b6;
+  --pl-color-project-master-pale: #cedde2;
+
+  /* Color Global */
+  --pl-color-global-background-primary: #fff;
+  --pl-color-global-background-secondary: #f3f3f3;
+
+  /* Color Text */
+  --pl-color-text-primary: #242424;
+  --pl-color-text-secondary: #717171;
+  --pl-color-text-tertiary: #b8b8b8;
+  --pl-color-text-accent: #d80000;
+  --pl-color-text-invert-primary: #fff;
+  --pl-color-text-invert-secondary: rgb(255 255 255 / 40%);
+  --pl-color-text-system-success: #2c7e34;
+  --pl-color-text-system-warning: #c14600;
+  --pl-color-text-system-error: #ad0000;
+  --pl-color-text-link-default: #0071c2;
+  --pl-color-text-link-visited: #4691c7;
+
+  /* Color Button Primary */
+  --pl-color-button-background-primary-default: #ed0e00;
+  --pl-color-button-background-primary-hover: #f13e33;
+  --pl-color-button-background-primary-pressed: #ce0e00;
+  --pl-color-button-background-primary-disabled: #ffafaa;
+
+  /* Color Button Secondary */
+  --pl-color-button-background-secondary-default: #f3f3f3;
+  --pl-color-button-background-secondary-hover: #edecec;
+  --pl-color-button-background-secondary-pressed: #e8e8e8;
+  --pl-color-button-background-secondary-disabled: #f5f5f5;
+
+  /* Color Button Ghost */
+  --pl-color-button-background-ghost-default: transparent;
+  --pl-color-button-background-ghost-hover: rgb(179 179 179 / 10%);
+  --pl-color-button-background-ghost-pressed: rgb(182 182 182 / 20%);
+  --pl-color-button-background-ghost-disabled: transparent;
+
+  /* Color Button Border */
+  --pl-color-button-border-default: #ededed;
+  --pl-color-button-border-hover: #d6d6d6;
+  --pl-color-button-border-pressed: #b8b8b8;
+  --pl-color-button-border-disabled: #ededed;
+
+  /* Color Button Invert */
+  --pl-color-button-background-invert-default: #fff;
+  --pl-color-button-background-invert-hover: rgb(255 255 255 / 80%);
+  --pl-color-button-background-invert-pressed: rgb(255 255 255 / 75%);
+  --pl-color-button-background-invert-disabled: #fff;
+
+  /* Color Button Ghost Invert */
+  --pl-color-button-background-ghostInvert-default: transparent;
+  --pl-color-button-background-ghostInvert-hover: rgb(255 255 255 / 10%);
+  --pl-color-button-background-ghostInvert-pressed: rgb(255 255 255 / 20%);
+  --pl-color-button-background-ghostInvert-disabled: transparent;
+
+  /* Color Button Inline */
+  --pl-color-button-text-inline-default: #ed0e00;
+  --pl-color-button-text-inline-hover: #f13e33;
+  --pl-color-button-text-inline-pressed: #ce0e00;
+  --pl-color-button-text-inline-disabled: #ffafaa;
+
+  /* Color Button Inline Invert */
+  --pl-color-button-text-inlineInvert-default: #fff;
+  --pl-color-button-text-inlineInvert-hover: rgb(255 255 255 / 80%);
+  --pl-color-button-text-inlineInvert-pressed: rgb(255 255 255 / 60%);
+  --pl-color-button-text-inlineInvert-disabled: rgb(255 255 255 / 40%);
+
+  /* Color Button Payment SPB */
+  --pl-color-button-background-paymentSbp-default: #1d1346;
+  --pl-color-button-background-paymentSbp-hover: #3f3662;
+  --pl-color-button-background-paymentSbp-pressed: #1b1140;
+  --pl-color-button-background-paymentSbp-disabled: #b4afc9;
+
+  /* Color Button Payment Sber */
+  --pl-color-button-background-paymentSber-default: #21a038;
+  --pl-color-button-background-paymentSber-hover: #4db360;
+  --pl-color-button-background-paymentSber-pressed: #168c2c;
+  --pl-color-button-background-paymentSber-disabled: #58c56b;
+
+  /* Color Button Wallet */
+  --pl-color-button-background-wallet-default: #141414;
+  --pl-color-button-background-wallet-hover: #414141;
+  --pl-color-button-background-wallet-pressed: #000;
+  --pl-color-button-background-wallet-disabled: #b8b8b8;
+
+  /* Color Badge */
+  --pl-color-badge-background-primaryDiscount: #ed0e00;
+  --pl-color-badge-background-secondaryDiscount: #ffc9c3;
+  --pl-color-badge-background-new: #409449;
+  --pl-color-badge-background-neutral: #f3f3f3;
+  --pl-color-badge-border-primary: #fff;
+
+  /* Color Chips */
+  --pl-color-chips-background-selected-default: #474747;
+  --pl-color-chips-background-selected-hover: #525252;
+  --pl-color-chips-background-selected-pressed: #393939;
+  --pl-color-chips-background-primary-default: #f5f5f5;
+  --pl-color-chips-background-primary-hover: #f0f0f0;
+  --pl-color-chips-background-primary-pressed: #ededed;
+  --pl-color-chips-background-primary-disabled: #f3f3f3;
+
+  /* Color Chips Add (Tabs, Filter) */
+  --pl-color-chips-background-secondary-default: #fff;
+  --pl-color-chips-background-secondary-hover: #fafafa;
+  --pl-color-chips-background-secondary-pressed: #f5f5f5;
+  --pl-color-chips-background-secondary-disabled: #fff;
+  --pl-color-chips-border-secondary-default: #ededed;
+  --pl-color-chips-border-secondary-hover: #d6d6d6;
+  --pl-color-chips-border-secondary-pressed: #b8b8b8;
+  --pl-color-chips-border-secondary-disabled: #f5f5f5;
+
+  /* Color Segmented Control */
+  --pl-color-segmentedcontrol-background-primary: rgb(71 71 71 / 12%);
+  --pl-color-segmentedcontrol-button-background-primary: #fff;
+  --pl-color-segmentedcontrol-background-invert: rgb(71 71 71 / 12%);
+  --pl-color-segmentedcontrol-button-background-invert: #474747;
+
+  /* Color Switch */
+  --pl-color-switch-background-on-default: #474747;
+  --pl-color-switch-background-on-hover: #6f6f6f;
+  --pl-color-switch-background-on-pressed: #212121;
+  --pl-color-switch-background-on-disabled: #b8b8b8;
+  --pl-color-switch-background-off-default: #e8e8e8;
+  --pl-color-switch-background-off-hover: #e0e0e0;
+  --pl-color-switch-background-off-pressed: #bebebe;
+  --pl-color-switch-background-off-disabled: #f3f3f3;
+  --pl-color-switch-knob-fill-default: #fff;
+
+  /* Color Radiobutton */
+  --pl-color-radiobutton-fill-unchecked-default: #e8e8e8;
+  --pl-color-radiobutton-fill-unchecked-hover: #e3e3e3;
+  --pl-color-radiobutton-fill-unchecked-pressed: #e0e0e0;
+  --pl-color-radiobutton-fill-unchecked-disabled: #e8e8e8;
+  --pl-color-radiobutton-fill-checked-default: #404040;
+  --pl-color-radiobutton-fill-checked-hover: #525252;
+  --pl-color-radiobutton-fill-checked-pressed: #404040;
+  --pl-color-radiobutton-fill-checked-disabled: #b8b8b8;
+  --pl-color-radiobutton-dot-fill-checked-default: #fff;
+
+  /* Color Checkbox */
+  --pl-color-checkbox-border-unchecked-default: #717171;
+  --pl-color-checkbox-border-unchecked-hover: #595959;
+  --pl-color-checkbox-border-unchecked-pressed: #595959;
+  --pl-color-checkbox-border-unchecked-disabled: #d0d0d0;
+  --pl-color-checkbox-background-unchecked-default: #fff;
+  --pl-color-checkbox-background-unchecked-hover: #f1f1f1;
+  --pl-color-checkbox-background-unchecked-pressed: #ddd;
+  --pl-color-checkbox-background-unchecked-disabled: #fff;
+  --pl-color-checkbox-fill-checked-default: #404040;
+  --pl-color-checkbox-fill-checked-hover: #525252;
+  --pl-color-checkbox-fill-checked-pressed: #404040;
+  --pl-color-checkbox-fill-checked-disabled: #dadada;
+  --pl-color-checkbox-check-fill-checked-default: #fff;
+
+  /* Color Notification */
+  --pl-color-notification-background-default: #f5f5f5;
+
+  /* Color Toast */
+  --pl-color-toast-background-default: #474747;
+
+  /* Color Top Navigation */
+  --pl-color-topnavigation-background-global: #fff;
+  --pl-color-topnavigation-background-icon: rgb(255 255 255 / 70%);
+
+  /* Color Tab Bar */
+  --pl-color-tabbar-background-default: #fff;
+
+  /* Color Tooltip */
+  --pl-color-tooltip-background-primary: #fff;
+  --pl-color-tooltip-background-invert: #474747;
+
+  /* Color Skeleton */
+  --pl-color-skeleton-background-primary: #e8e8e8;
+  --pl-color-skeleton-background-secondary: #d9d9d9;
+
+  /* Color Slider Dots */
+  --pl-color-sliderdots-fill-default: #d0d0d0;
+  --pl-color-sliderdots-fill-selected: #2a2a2a;
+
+  /* Color Labels */
+  --pl-color-label-background-discount: #ed0e00;
+  --pl-color-label-background-promotion: #fed731;
+
+  /* Color Loader */
+  --pl-color-loader-fill-primary: #ed0e00;
+  --pl-color-loader-fill-secondary: #ff8144;
+  --pl-color-loader-fill-tertiary: #ffc247;
+
+  /* Color Icon */
+  --pl-color-icon-fill-primary: #2a2a2a;
+  --pl-color-icon-fill-secondary: #717171;
+  --pl-color-icon-fill-tertiary: #b8b8b8;
+  --pl-color-icon-fill-muted: #d0d0d0;
+  --pl-color-icon-fill-invert-primary: #fff;
+  --pl-color-icon-fill-invert-secondary: rgb(255 255 255 / 75%);
+  --pl-color-icon-fill-invert-tertiary: rgb(255 255 255 / 45%);
+  --pl-color-icon-fill-system-success: #2c7e34;
+  --pl-color-icon-fill-system-successWeak: #acdeb1;
+  --pl-color-icon-fill-system-warning: #c14600;
+  --pl-color-icon-fill-system-warningWeak: #fcc693;
+  --pl-color-icon-fill-system-error: #ad0000;
+  --pl-color-icon-fill-system-errorWeak: #e7b5b5;
+  --pl-color-icon-fill-project: var(--pl-color-project-core-primary);
+  --pl-color-icon-fill-projectWeak: #ffafaa;
+
+  /* Tabulation */
+  --pl-color-tabulation-border-focused: #a0a0a0;
+
+  /* Color Divider */
+  --pl-color-divider-primary: #e7e7e7;
+  --pl-color-divider-secondary: #c8c8c8;
+
+  /* Color Overlay */
+  --pl-color-overlay-background-default: rgb(0 0 0 / 65%);
+  --pl-color-overlay-background-onboarding: rgb(0 0 0 / 90%);
+  --pl-color-overlay-background-loading: rgb(255 255 255 / 80%);
+
+  /* Color Field */
+  --pl-color-field-background-default: #fafafa;
+  --pl-color-field-background-hover: #f7f7f7;
+  --pl-color-field-background-pressed: #f5f5f5;
+  --pl-color-field-background-focused: #f5f5f5;
+  --pl-color-field-background-disabled: #f3f3f3;
+  --pl-color-field-border-default: #ededed;
+  --pl-color-field-border-hover: #d6d6d6;
+  --pl-color-field-border-focused: #b8b8b8;
+  --pl-color-field-border-pressed: #b8b8b8;
+  --pl-color-field-border-disabled: #ededed;
+  --pl-color-field-fill-dots: #c4c4c4;
+
+  /* Color Surface Primary */
+  --pl-color-surface-background-primary-default: #fff;
+  --pl-color-surface-background-primary-hover: #fafafa;
+  --pl-color-surface-background-primary-pressed: #f5f5f5;
+  --pl-color-surface-background-primary-disabled: #fff;
+
+  /* Color Surface Intense */
+  --pl-color-surface-background-intense-default: #474747;
+  --pl-color-surface-background-intense-hover: #525252;
+  --pl-color-surface-background-intense-pressed: #404040;
+  --pl-color-surface-background-intense-disabled: #b8b8b8;
+
+  /* Color Surface Muted */
+  --pl-color-surface-background-muted-default: #f5f5f5;
+  --pl-color-surface-background-muted-hover: #f0f0f0;
+  --pl-color-surface-background-muted-pressed: #ededed;
+  --pl-color-surface-background-muted-disabled: #f3f3f3;
+
+  /* Color Surface Subdued */
+  --pl-color-surface-background-subdued-default: #e8e8e8;
+  --pl-color-surface-background-subdued-hover: #e3e3e3;
+  --pl-color-surface-background-subdued-pressed: #e0e0e0;
+  --pl-color-surface-background-subdued-disabled: #e8e8e8;
+
+  /* Color Border Primary */
+  --pl-color-border-primary-default: #717171;
+  --pl-color-border-primary-hover: #595959;
+  --pl-color-border-primary-pressed: #595959;
+  --pl-color-border-primary-disabled: #d0d0d0;
+
+  /* Color Border Secondary */
+  --pl-color-border-secondary-default: #ededed;
+  --pl-color-border-secondary-hover: #d6d6d6;
+  --pl-color-border-secondary-pressed: #b8b8b8;
+  --pl-color-border-secondary-disabled: #ededed;
+
+  /* Color Border Focused */
+  --pl-color-border-focused-default: #181818;
+
+  /* Color System Success */
+  --pl-color-success-background-weak-default: #eaf7eb;
+  --pl-color-success-background-weak-hover: #eaf7eb;
+  --pl-color-success-background-weak-pressed: #dff0e0;
+  --pl-color-success-background-accent-default: #2c7e34;
+  --pl-color-success-background-accent-hover: #358e3e;
+  --pl-color-success-background-accent-pressed: #246c2b;
+
+  /* Color System Warning */
+  --pl-color-warning-background-weak-default: #fff5eb;
+  --pl-color-warning-background-weak-hover: #fff2e4;
+  --pl-color-warning-background-weak-pressed: #feefde;
+  --pl-color-warning-background-accent-default: #c14600;
+  --pl-color-warning-background-accent-hover: #cf5109;
+  --pl-color-warning-background-accent-pressed: #ac3e00;
+
+  /* Color System Error */
+  --pl-color-error-background-weak-default: #fbf2f2;
+  --pl-color-error-background-weak-hover: #f9eded;
+  --pl-color-error-background-weak-pressed: #f8e8e8;
+  --pl-color-error-background-accent-default: #ad0000;
+  --pl-color-error-background-accent-hover: #be0622;
+  --pl-color-error-background-accent-pressed: #950000;
+
+  /* Color System Border */
+  --pl-color-success-border-default: #acdeb1;
+  --pl-color-success-border-pressed: #2c7e34;
+  --pl-color-warning-border-default: #fcc693;
+  --pl-color-warning-border-pressed: #c14600;
+  --pl-color-error-border-default: #e7b5b5;
+  --pl-color-error-border-pressed: #ad0000;
+
+  /* Radius Field */
+  --pl-radius-field-s: 12px;
+  --pl-radius-field-m: 12px;
+
+  /* Radius Search */
+  --pl-radius-search-s: 12px;
+
+  /* Radius Skeleton */
+  --pl-radius-skeleton-s: 16px;
+
+  /* Radius Tooltip */
+  --pl-radius-tooltip-s: 16px;
+
+  /* Radius Toast */
+  --pl-radius-toast-s: 12px;
+
+  /* Radius Checkbox */
+  --pl-radius-checkbox-s: 2px;
+
+  /* Radius Notification */
+  --pl-radius-notification-s: 16px;
+
+  /* Radius Button */
+  --pl-radius-buttons-s: 8px;
+  --pl-radius-buttons-m: 12px;
+  --pl-radius-buttons-l: 12px;
+
+  /* Radius Badge */
+  --pl-radius-badge-s: 16px;
+  --pl-radius-badge-m: 20px;
+  --pl-radius-badge-l: 24px;
+
+  /* Radius Chips */
+  --pl-radius-chips-s: 8px;
+  --pl-radius-chips-m: 12px;
+
+  /* Radius Bottomsheet */
+  --pl-radius-bottomsheet-s: 24px;
+
+  /* Border Width Button */
+  --pl-borderWidth-button: 1px;
+
+  /* Border Width Field */
+  --pl-borderWidth-field: 1px;
+
+  /* Border Width Chips */
+  --pl-borderWidth-chips: 1px;
+
+  /* Border Width Checkbox */
+  --pl-borderWidth-checkbox: 2px;
+
+  /* Border Width Dropdown - есть в списке, но не используется
+  --pl-borderWidth-dropdown: 1px;  */
+
+  /*
+    Inner WEB
+    Далее идут внутренние переменные для WEB, которых нет в базовой ДС
+  */
+
+  /* Units */
+  --pl-unit-base: 4px;
+  --pl-unit-x1: 4px;
+  --pl-unit-x2: 8px;
+  --pl-unit-x3: 12px;
+  --pl-unit-x4: 16px;
+  --pl-unit-x5: 20px;
+  --pl-unit-x6: 24px;
+  --pl-unit-x7: 28px;
+  --pl-unit-x8: 32px;
+  --pl-unit-x9: 36px;
+  --pl-unit-x10: 40px;
+
+  /* Indexes */
+  --pl-z-index-negative: -1;
+  --pl-z-index-level0: 0;
+  --pl-z-index-level1: 1;
+  --pl-z-index-level2: 2;
+  --pl-z-index-level3: 3;
+  --pl-z-index-over: 10;
+  --pl-z-index-tooltip: 50;
+  --pl-z-index-overlay: 100;
+  --pl-z-index-toast: 110;
+}
+
+a {
+  font-weight: 500;
+  color: #646cff;
+  text-decoration: inherit;
+}
+a:hover {
+  color: #535bf2;
+}
+
+body {
+  margin: 0;
+  display: flex;
+  place-items: center;
+  min-width: 320px;
+  min-height: 100vh;
+}
+
+h1 {
+  font-size: 3.2em;
+  line-height: 1.1;
+}
+
+.card {
+  padding: 2em;
+}
+
+#app {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 2rem;
+}
+
+@media (prefers-color-scheme: light) {
+  :root {
+    color: #213547;
+    background-color: #ffffff;
+  }
+  a:hover {
+    color: #747bff;
+  }
+  button {
+    background-color: #f9f9f9;
+  }
+}
